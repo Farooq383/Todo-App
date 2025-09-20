@@ -118,8 +118,8 @@ body{
 }
 
 .empty-image{
-    height: 30vh;
-    width: 30vh;
+    height: 25vh;
+    width: 25vh;
 }
 
 #task-list li{
