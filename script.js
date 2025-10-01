@@ -79,7 +79,7 @@ checkbox.addEventListener("change",()=>{
     editbtn.style.opacity=isChecked ? "0.5" : "1";
     editbtn.style.pointerEvents=isChecked ? "none" : "auto";
     updateProgress();
-    savetasksTolocalstorage();
+    // savetasksTolocalstorage();
     
 })
 
@@ -122,7 +122,7 @@ taskinput.addEventListener("keydown",(e)=>{
 
 
 
-loadtasksfromlocalstorage();
+  loadtasksfromlocalstorage();
 
 
 
