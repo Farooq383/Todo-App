@@ -18,26 +18,30 @@ body{
     align-items: center;
     min-height: 100vh;
     background: url(images/bg.png)no-repeat center center/cover;
+    background-attachment: fixed;
 }
 
 .container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
     width: 100%;
     padding: 0px 20px;
+    /* overflow: hidden; */
 }
 
 
 #task-list li.completed span{
     text-decoration: 2px line-through #000;
     color: #000;
+
 }
 
 
 .todo-app{
     /* width: 100%; */
+    
     min-width: 300px;
     padding: 2rem;
     display: flex;
@@ -50,6 +54,7 @@ body{
     box-shadow: 0 0 100px rgba(0,0,0,0.5);
     border: 3px solid rgba(255, 255, 255, 0);
     backdrop-filter:blur(7px);
+    /* overflow: hidden; */
 }
 
 
@@ -57,7 +62,6 @@ body{
 .todo-app h1{
     font-size: 2rem;
 }
-
 
 
 .input-area{
@@ -115,7 +119,34 @@ body{
 
 #task-list{
     width: 100%;
+    max-height: 300px;
+    overflow: auto;
 }
+
+#task-list::-webkit-scrollbar {
+    width: 8px;                 
+}
+
+#task-list::-webkit-scrollbar-track {
+    background:rgba(255,194,209,0.3);  
+    border-radius: 10px;
+}
+
+#task-list::-webkit-scrollbar-thumb {
+    background: #ff6f91;       
+    border-radius: 10px;
+}
+
+#task-list::-webkit-scrollbar-thumb:hover {
+    background: #fff;      
+}
+
+#task-list {
+    scrollbar-width: thin;               
+    scrollbar-color: #ff6f91 transparent; 
+}
+
+
 
 .empty-image{
     height: 25vh;
@@ -172,6 +203,7 @@ font-size: 1.rem;
     flex: 1;
     margin-left: 10px;
     word-wrap:break-word;
+    width: 50px;
 }
 
 

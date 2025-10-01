@@ -19,7 +19,7 @@ const toggleEmptystate=()=>{
 const updateProgress=(checkcompletion = true)=>{
     const   totaltasks=tasklist.children.length;
     const completedtask=tasklist.querySelectorAll(".checkbox:checked").length;
-    progressnumber.style.width=totaltasks ? `${(completedtask/totaltasks)*100}%` : "0%";
+    progressbar.style.width=totaltasks ? `${(completedtask/totaltasks)*100}%` : "0%";
     progressnumber.textContent=`${completedtask} / ${totaltasks}`;
     
     if(checkcompletion && totaltasks> 0 && completedtask === totaltasks){
